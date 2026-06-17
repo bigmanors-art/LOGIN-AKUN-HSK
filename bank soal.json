@@ -1,5 +1,33 @@
 [
-{hanzi:"阿姨", pinyin:"āyí", answer:"bibi / sapaan wanita lebih tua"},
+  { "hanzi": "学", "pinyin": "xué", "answer": "belajar" },
+  { "hanzi": "说", "pinyin": "shuō", "answer": "berbicara" },
+  { "hanzi": "看", "pinyin": "kàn", "answer": "melihat" },
+  { "hanzi": "听", "pinyin": "tīng", "answer": "mendengar" },
+  { "hanzi": "写", "pinyin": "xiě", "answer": "menulis" },
+
+  { "hanzi": "读", "pinyin": "dú", "answer": "membaca" },
+  { "hanzi": "吃", "pinyin": "chī", "answer": "makan" },
+  { "hanzi": "喝", "pinyin": "hē", "answer": "minum" },
+  { "hanzi": "买", "pinyin": "mǎi", "answer": "membeli" },
+  { "hanzi": "卖", "pinyin": "mài", "answer": "menjual" },
+
+  { "hanzi": "走", "pinyin": "zǒu", "answer": "berjalan" },
+  { "hanzi": "跑", "pinyin": "pǎo", "answer": "berlari" },
+  { "hanzi": "坐", "pinyin": "zuò", "answer": "duduk" },
+  { "hanzi": "站", "pinyin": "zhàn", "answer": "berdiri" },
+  { "hanzi": "睡", "pinyin": "shuì", "answer": "tidur" }
+]
+
+
+
+
+
+
+
+[
+ {
+  hanzi:"阿姨", pinyin:"āyí", answer:"bibi / sapaan wanita lebih tua"},
+
 { hanzi:"啊", pinyin:"a", answer:"ah (partikel)" },
 { hanzi:"唉", pinyin:"āi", answer:"aduh / sigh" },
 { hanzi:"哎哟", pinyin:"āiyō", answer:"aduh / ya ampun" },
