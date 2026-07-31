@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Wedding Of RIZQON & AYU</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Poppins",sans-serif;
+    background:pink;
+    color:black;
+    overflow-x:hidden;
+}
+
+section{
+    padding:80px 20px;
+}
+
+h1,h2,h3{
+    font-family:"Cormorant Garamond",serif;
+}
+
+img{
+    display:block;
+    width:100%;
+}
+
+a{
+    text-decoration:none;
+}
+
+button{
+    cursor:pointer;
+}
+
+/* ===========================
+   UTILITIES
+=========================== */
+
+.section-title{
+    text-align:center;
+    font-size:48px;
+    color:white;
+    margin-bottom:40px;
+}
+
+.card-box{
+    background:#fff;
+    border-radius:20px;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+.story-card{
+    background:#fff;
+    padding:30px;
+    border-radius:20px;
+    margin-bottom:25px;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+.center{
+    text-align:center;
+}
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* ===========================
+   LOADER
+=========================== */
+
+#loader{
+    position:fixed;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#fff;
+    z-index:99999;
+}
+
+.loaderBox{
+    text-align:center;
+}
+
+.loaderBox h1{
+    font-size:42px;
+    color:#b8924f;
+}
+
+.spinner{
+    width:60px;
+    height:60px;
+    margin:30px auto;
+    border:6px solid #ddd;
+    border-top:6px solid #b8924f;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+/* ===========================
+   COVER
+=========================== */
+
+#cover{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:url("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1600") center/cover;
+}
+
+#cover::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+}
+
+.coverContent{
+    position:relative;
+    z-index:2;
+    padding:20px;
+    color:#fff;
+    text-align:center;
+}
+
+.coverContent p{
+    margin-bottom:15px;
+    letter-spacing:4px;
+}
+
+.coverContent h1{
+    font-size:70px;
+}
+
+.coverContent span{
+    display:block;
+    margin:10px 0;
+    font-size:55px;
+}
+
+.coverContent h2{
+    margin-top:30px;
+    font-size:28px;
+}
+
+#guest{
+    margin-top:10px;
+    font-size:34px;
+    color:#ffe8a8;
+}
+
+#open{
+    margin-top:40px;
+    padding:15px 45px;
+    border:none;
+    border-radius:40px;
+    background:#c4a063;
+    color:#fff;
+    font-size:18px;
+    transition:.3s;
+}
+
+#open:hover{
+    transform:translateY(-4px);
+}
+
+/* ===========================
+   MAIN
+=========================== */
+
+#main{
+    display:none;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+}
+
+.hero h2{
+    margin-bottom:20px;
+    font-size:50px;
+    color:#b8924f;
+}
+
+.hero p{
+    font-size:20px;
+    line-height:1.8;
+}
+
+/* ===========================
+   COUNTDOWN
+=========================== */
+
+#countdown{
+    text-align:center;
+    background:pink;
+}
+
+.counter{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+    margin-top:50px;
+}
+
+.box{
+    width:250px;
+    padding:25px 30px;
+    border-radius:18px;
+    background:#faf8f4;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:15px
+}
+
+.box h1{
+    font-family:Comic Sans MS;
+    margin:0;
+    font-size:50px;
+    color:#b8924f;
+    line-height:1;
+}
+
+.box p{
+    margin:0;
+    font-size:20px;
+    font-weight:500;
+}
+
+/* ===========================
+   COUPLE
+=========================== */
+
+#couple{
+    text-align:center;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+    max-width:1000px;
+    margin:auto;
+}
+
+.card{
+    padding:20px;
+    border-radius:20px;
+    background:#fff;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+.card img{
+    height:450px;
+    object-fit:cover;
+    border-radius:15px;
+    margin-bottom:20px;
+}
+
+.card h2{
+    font-size:38px;
+    color:#b8924f;
+}
+
+.card p{
+    line-height:1.8;
+}
+/* ===========================
+   FADE TRANSITION
+=========================== */
+
+.fade-out{
+    opacity:0;
+    visibility:hidden;
+    transition:opacity .8s ease,visibility .8s ease;
+}
+
+.fade-in{
+    opacity:1;
+    visibility:visible;
+    animation:fadeIn .8s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ===========================
+   FORM
+=========================== */
+
+form{
+    max-width:650px;
+    margin:40px auto;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-family:inherit;
+    font-size:15px;
+}
+
+textarea{
+    height:160px;
+    resize:vertical;
+}
+
+button.primary{
+    width:100%;
+    margin-top:20px;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#E6FFA2;
+    color:#white;
+    font-size:16px;
+}
+
+/* ===========================
+   GIFT
+=========================== */
+
+.gift-box{
+    max-width:500px;
+    margin:40px auto;
+    padding:40px;
+    text-align:center;
+    background:#faf8f4;
+    border-radius:10px;
+}
+
+.gift-box button{
+    margin-top:20px;
+    padding:15px 35px;
+    border:none;
+    border-radius:10px;
+    background:#E6FFA2;
+    color:#black;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+    background:#222;
+    color:#fff;
+    text-align:center;
+    padding:60px 20px;
+}
+
+footer p{
+    margin-top:20px;
+    line-height:2;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .coverContent h1{
+        font-size:50px;
+    }
+
+    .coverContent span{
+        font-size:42px;
+    }
+
+    .hero h2{
+        font-size:38px;
+    }
+
+    .section-title{
+        font-size:38px;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+
+    .card img{
+        height:380px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ===== Loader ===== -->
+
+<div id="loader">
+    <div class="loaderBox">
+        <h1>The Wedding Of</h1>
+        <div class="spinner"></div>
+    </div>
+</div>
+
+<!-- ===== Cover ===== -->
+
+<section id="cover">
+
+    <div class="coverContent">
+
+        <p>THE WEDDING OF</p>
+
+        <h1>Rizqon</h1>
+        <span>&</span>
+        <h1>Ayu</h1>
+
+        <h2>Kepada Yth.</h2>
+
+        <div id="guest">
+            Tamu Undangan
+        </div>
+
+        <button id="open">
+            Buka Undangan
+        </button>
+
+    </div>
+
+</section>
+
+<div id="main">
+
+<section class="hero">
+
+    <h2>
+        Assalamu'alaikum Warahmatullahi Wabarakatuh
+    </h2>
+
+    <p>
+        Dengan memohon rahmat dan ridha Allah SWT,
+        kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri
+        acara pernikahan kami.
+    </p>
+
+</section>
+
+<section id="countdown">
+
+    <h2 class="section-title">
+        Menuju Hari Bahagia
+    </h2>
+
+    <div class="counter">
+
+        <div class="box">
+            <h1 id="day">00</h1>
+            <p>Hari</p>
+        </div>
+
+        <div class="box">
+            <h1 id="hour">00</h1>
+            <p>Jam</p>
+        </div>
+
+        <div class="box">
+            <h1 id="minute">00</h1>
+            <p>Menit</p>
+        </div>
+
+        <div class="box">
+            <h1 id="second">00</h1>
+            <p>Detik</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="couple">
+
+    <h2 class="section-title">
+        Mempelai
+    </h2>
+
+    <div class="grid">
+        <div class="card">
+
+            <img
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=700"
+                alt="Mempelai Pria">
+
+            <h2>Muhammad Rizqon Fadhillah</h2>
+
+            <p>Putra Pertama dari</p>
+            <p>Bapak Dahlan &amp; Ibu Noor Aini</p>
+
+        </div>
+
+        <div class="card">
+
+            <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=700"
+                alt="Mempelai Wanita">
+
+            <h2>Wahyu Waliyadzani</h2>
+
+            <p>Putri Pertama dari</p>
+            <p>Bapak Lorem &amp; Ibu Ipsum</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="story">
+
+    <h2 class="section-title">
+        Love Story
+    </h2>
+
+    <div style="max-width:900px;margin:auto;">
+
+        <div class="story-card">
+
+            <h3>❤ Pertama Bertemu</h3>
+
+            <p>
+                Tak ada yang kebetulan di dunia ini.
+                Pertemuan kami menjadi awal perjalanan indah
+                yang dipersatukan oleh takdir Allah SWT.
+            </p>
+
+        </div>
+
+        <div class="story-card">
+
+            <h3>❤  Menjalin Komitmen</h3>
+
+            <p>
+                Hari demi hari kami saling mengenal,
+                bertumbuh bersama,
+                dan saling menguatkan
+                dalam setiap keadaan.
+            </p>
+
+        </div>
+
+        <div class="story-card">
+
+            <h3>❤  Menikah</h3>
+
+            <p>
+                Dengan memohon ridha Allah SWT,
+                kami memutuskan mengikat janji suci
+                dalam pernikahan.
+                Semoga menjadi keluarga yang
+                sakinah, mawaddah, wa rahmah.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="event" style="background:pink;">
+
+    <h2 class="section-title">
+        Detail Acara
+    </h2>
+
+    <div style="
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+        gap:25px;
+        max-width:1000px;
+        margin:50px auto;
+    ">
+
+        <div class="card-box center" style="padding:35px;">
+
+            <h2>Akad Nikah</h2>
+
+            <h3>05 September 2026</h3>
+
+            <p>05.00 WIB</p>
+
+            <p>Gedung Serbaguna Bahagia</p>
+
+        </div>
+
+        <div class="card-box center" style="padding:35px;">
+
+            <h2>Resepsi</h2>
+
+            <h3>06 September 2026</h3>
+
+            <p>08.00 WIB</p>
+
+            <p>Gedung Serbaguna Bahagia</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="location">
+
+    <h2 class="section-title">
+        Lokasi
+    </h2>
+
+    <div style="max-width:1000px;margin:40px auto;">
+
+        <iframe
+            src="https://www.google.com/maps?q=Jakarta&output=embed"
+            width="100%"
+            height="450"
+            style="border:none;border-radius:20px;"
+            loading="lazy"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
+</section>
+
+<section id="gallery" style="background:pink;">
+
+    <h2 class="section-title">
+        Galeri
+    </h2>
+
+    <div style="
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+        gap:15px;
+        max-width:1100px;
+        margin:40px auto;
+    ">
+
+        <img src="https://picsum.photos/600/700?1" alt="Galeri 1">
+        <img src="https://picsum.photos/600/700?2" alt="Galeri 2">
+        <img src="https://picsum.photos/600/700?3" alt="Galeri 3">
+        <img src="https://picsum.photos/600/700?4" alt="Galeri 4">
+        <img src="https://picsum.photos/600/700?5" alt="Galeri 5">
+        <img src="https://picsum.photos/600/700?6" alt="Galeri 6">
+
+    </div>
+
+</section>
+<section id="rsvp">
+
+    <h2 class="section-title">
+        RSVP
+    </h2>
+
+    <form id="rsvpForm">
+
+        <input
+            type="text"
+            placeholder="Nama"
+            required>
+
+        <select>
+
+            <option>Hadir</option>
+            <option>Tidak Hadir</option>
+
+        </select>
+
+        <textarea
+            placeholder="Ucapan dan Doa"></textarea>
+
+        <button
+            type="submit"
+            class="primary">
+            Kirim
+        </button>
+
+    </form>
+
+</section>
+
+<section id="gift" style="background:pink;">
+
+    <h2 class="section-title">
+        Amplop Digital
+    </h2>
+
+    <div class="gift-box">
+
+        <h3>BCA</h3>
+
+        <h2 id="rekening">
+            1234567890
+        </h2>
+
+        <button id="copyRek">
+            Salin Rekening
+        </button>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <h2>Terima Kasih</h2>
+
+    <p>
+        Merupakan suatu kehormatan bagi kami apabila
+        Bapak/Ibu/Saudara/i berkenan hadir
+        dan memberikan doa restu.
+    </p>
+
+</footer>
+
+</div>
+
+<script>
+
+/* ===========================
+   LOADER
+=========================== */
+
+const loader = document.getElementById("loader");
+const cover = document.getElementById("cover");
+const main = document.getElementById("main");
+
+window.onload = () => {
+    setTimeout(() => {
+        loader.style.display = "none";
+    }, 800);
+};
+
+/* ===========================
+   BACKGROUND MUSIC
+=========================== */
+
+const music = new Audio(
+    "https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8d6d5d2c8.mp3"
+);
+
+music.loop = true;
+
+/* ===========================
+   OPEN INVITATION
+=========================== */
+
+const openButton = document.getElementById("open");
+
+openButton.onclick = () => {
+
+    cover.classList.add("fade-out");
+
+    setTimeout(() => {
+
+        cover.style.display = "none";
+
+        main.style.display = "block";
+
+        requestAnimationFrame(() => {
+            main.classList.add("fade-in");
+        });
+
+        music.play();
+
+    }, 800);
+
+};
+
+/* ===========================
+   GUEST NAME
+=========================== */
+
+const guest = document.getElementById("guest");
+
+const guestName =
+    new URLSearchParams(window.location.search).get("to");
+
+if (guestName) {
+    guest.innerHTML = decodeURIComponent(guestName);
+}
+
+/* ===========================
+   COUNTDOWN
+=========================== */
+
+const day = document.getElementById("day");
+const hour = document.getElementById("hour");
+const minute = document.getElementById("minute");
+const second = document.getElementById("second");
+
+const target =
+    new Date("2026-09-05T08:00:00").getTime();
+
+setInterval(() => {
+
+    const now = new Date().getTime();
+
+    const distance = target - now;
+
+    day.innerHTML = Math.floor(
+        distance / (1000 * 60 * 60 * 24)
+    );
+
+    hour.innerHTML = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) /
+        (1000 * 60 * 60)
+    );
+
+    minute.innerHTML = Math.floor(
+        (distance % (1000 * 60 * 60)) /
+        (1000 * 60)
+    );
+
+    second.innerHTML = Math.floor(
+        (distance % (1000 * 60)) /
+        1000
+    );
+
+}, 1000);
+/* ===========================
+   COPY BANK ACCOUNT
+=========================== */
+
+const rekening = document.getElementById("rekening");
+const copyButton = document.getElementById("copyRek");
+
+copyButton.addEventListener("click", async () => {
+    const text = rekening.textContent.trim();
+
+    try {
+        await navigator.clipboard.writeText(text);
+        alert("Nomor rekening berhasil disalin.");
+    } catch (err) {
+        const temp = document.createElement("textarea");
+        temp.value = text;
+        document.body.appendChild(temp);
+        temp.select();
+        document.execCommand("copy");
+        document.body.removeChild(temp);
+
+        alert("Nomor rekening berhasil disalin.");
+    }
+});
+/* ===========================
+   RSVP FORM
+=========================== */
+
+const rsvpForm = document.getElementById("rsvpForm");
+
+rsvpForm.onsubmit = (event) => {
+
+    event.preventDefault();
+
+    alert("Terima kasih atas konfirmasi kehadirannya.");
+
+    rsvpForm.reset();
+
+};
+
+</script>
+
+</body>
+</html>
